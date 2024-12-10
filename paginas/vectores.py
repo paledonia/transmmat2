@@ -164,7 +164,7 @@ elif opc == "Multiplicacion por un escalar":
 
 
 st.markdown("""
-> *La introdccuin de los numeros como :rainbow[coordenadas] es un acto de violencia*
+> *La introduccion de los numeros como :rainbow[coordenadas] es un acto de violencia*
 >
 > **- Hermann Weyl**
 """)

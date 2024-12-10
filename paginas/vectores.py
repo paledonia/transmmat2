@@ -16,7 +16,12 @@ El elemento mas importante en el algebra lineal es el **vector**, asi que en est
 repasaremos cuales son sus elementos, que significado tienen y sus operaciones basicas.  
 
 
-""")
+""") 
+
+st.markdown (""" 
+    Dependiendo del area del conocimiento existen diferentes formas de denominar a un elemento como vector.  
+
+""")    
 
 c1, c2 = st.columns (2)
 

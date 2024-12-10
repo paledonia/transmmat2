@@ -12,7 +12,7 @@ def graf_2vec2d (v1,v2):
     fig, ax = plt.subplots() 
 
     #grafica los vectores 
-    ax.quiver(0, 0, v1[0], v1[1], angles='xy', scale_units='xy', scale=1, color='pink', label='Vector 1')
+    ax.quiver(0, 0, v1[0], v1[1], angles='xy', scale_units='xy', scale=1, color='red', label='Vector 1')
     ax.quiver(0, 0, v2[0], v2[1], angles='xy', scale_units='xy', scale=1, color='blue', label='Vector 2 ')
 
     # Configurar el gráfico
@@ -71,9 +71,9 @@ def graf_suma2vecx (v1 , v2):
     fig, ax = plt.subplots()  
 
     ax.quiver(0, 0, v1[0], v1[1], angles='xy', scale_units='xy', scale=1, color='red', label='$\mathbf{V}$')
-    ax.quiver(v1[0], v1[1], v2[0], v2[1], angles='xy', scale_units='xy', scale=1, color='lightblue', label='$\mathbf{U}$ en la punta de $\mathbf{V}$')
-    ax.quiver(0, 0, v2[0], v2[1], angles='xy', scale_units='xy', scale=1, color='blue', label='$\mathbf{U}$')
-    ax.quiver(0,0,suma_vec[0],suma_vec[1], angles='xy', scale_units='xy', scale = 1 , color='purple', label = '$\mathbf{V}$ + $\mathbf{U}$')
+    ax.quiver(v1[0], v1[1], v2[0], v2[1], angles='xy', scale_units='xy', scale=1, color='grey', label='$\mathbf{U}$ en la punta de $\mathbf{V}$')
+    ax.quiver(0, 0, v2[0], v2[1], angles='xy', scale_units='xy', scale=1, color='black', label='$\mathbf{U}$')
+    ax.quiver(0,0,suma_vec[0],suma_vec[1], angles='xy', scale_units='xy', scale = 1 , color='blue', label = '$\mathbf{V}$ + $\mathbf{U}$')
 
     # Configurar el gráfico
     ax.axhline(0, color='black', linewidth=0.5)
@@ -105,9 +105,9 @@ def graf_res2vecx (v1, v2):
     fig, ax = plt.subplots()  
 
     ax.quiver(0, 0, v1[0], v1[1], angles='xy', scale_units='xy', scale=1, color='red', label='$\mathbf{V}$')
-    ax.quiver(0, 0, v2[0], v2[1], angles='xy', scale_units='xy', scale=1, color='blue', label='$\mathbf{U}$')
-    ax.quiver(v1[0], v1[1], v2_1[0], v2_1[1], angles='xy', scale_units='xy', scale=1, color='lightblue', label='$\mathbf{U}$ en la punta de $\mathbf{V}$')
-    ax.quiver(0,0,res_vec[0],res_vec[1], angles='xy', scale_units='xy', scale = 1 , color='purple', label = '$\mathbf{V}$ - $\mathbf{U}$')
+    ax.quiver(0, 0, v2[0], v2[1], angles='xy', scale_units='xy', scale=1, color='black', label='$\mathbf{U}$')
+    ax.quiver(v1[0], v1[1], v2_1[0], v2_1[1], angles='xy', scale_units='xy', scale=1, color='grey', label='$\mathbf{U}$ en la punta de $\mathbf{V}$')
+    ax.quiver(0,0,res_vec[0],res_vec[1], angles='xy', scale_units='xy', scale = 1 , color='blue', label = '$\mathbf{V}$ - $\mathbf{U}$')
 
     # Configurar el gráfico
     ax.axhline(0, color='black', linewidth=0.5)
@@ -146,8 +146,8 @@ def graf_base (v1,v2):
         ax.plot([start[0], end[0]], [start[1], end[1]], color='lightblue', linewidth=0.8, linestyle='--')
 
     # Graficar los vectores base
-    ax.quiver(0, 0, v1[0], v1[1], angles='xy', scale_units='xy', scale=1, color='pink', label=f'$\mathbf{{i_n}} = {v1}$')
-    ax.quiver(0, 0, v2[0], v2[1], angles='xy', scale_units='xy', scale=1, color='b', label=f'$\mathbf{{j_n}} = {v2}$')
+    ax.quiver(0, 0, v1[0], v1[1], angles='xy', scale_units='xy', scale=1, color='red', label=f'$\mathbf{{i_n}} = {v1}$')
+    ax.quiver(0, 0, v2[0], v2[1], angles='xy', scale_units='xy', scale=1, color='black', label=f'$\mathbf{{j_n}} = {v2}$')
 
     # Configurar el gráfico
     ax.axhline(0, color='black', linewidth=0.5)  # Eje X

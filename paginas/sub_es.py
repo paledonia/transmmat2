@@ -11,7 +11,7 @@ st.subheader("*Un poema escrito como una operacion algebraica*")
 
 st.markdown("""
 > *Los matematicos requieren una pequeña dosis, no de genialidad, sino de :rainbow[libertad imaginativa] que, en mayor
-> dosis, seria locura*
+> dosis, seria locura.*
 >
 > **- Angus K. Rodgers**
 """)

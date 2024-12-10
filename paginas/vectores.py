@@ -78,11 +78,11 @@ st.markdown ("""
 Cuando multiplicamos un vector por un escalar solo multiplicamos el escalar por cada una de las componentes del vector. Siendo **a**
 el escalar hay que tener en cuenta:  
 
-- Sí **a** > 1, **a** agranda el vector.  
-- Sí **a** = 1, el vector permanece igual. 
-- Sí 0 < **a** < 1, **a** encoge el vector. 
-- Si **a** = 0, **a** desparece al vector.  
-- Sí **a** < 0, **a** escala y cambia de dirección al vector 
+- Sí **a** > 1,  **a** agranda el vector.  
+- Sí **a** = 1,  el vector permanece igual. 
+- Sí 0 < **a** < 1,  **a** encoge el vector. 
+- Si **a** = 0,  **a** desparece al vector.  
+- Sí **a** < 0,  **a** escala y cambia de dirección al vector 
 
 """) 
 

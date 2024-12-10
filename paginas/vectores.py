@@ -160,9 +160,14 @@ elif opc == "Multiplicacion por un escalar":
     w = np.array(u) * c 
     w = np.array(w) 
     graf_escvector(u,c)    
-    st.markdown (f"El vector resultante es:  **[{w[0]}, {w[1]}]** ")
+    st.markdown (f"El vector resultante es:  **[{w[0]}, {w[1]}]** ") 
 
 
+st.markdown("""
+> *La introdccuin de los numeros como :rainbow[coordenadas] es un acto de violencia*
+>
+> **- Hermann Weyl**
+""")
        
 
 

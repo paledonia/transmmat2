@@ -271,4 +271,31 @@ def graficar_determinante(matriz):
     except ValueError:
         st.error("La matriz no es válida. Asegúrate de que es una matriz de 2x2")
     except Exception as e:
-        st.error(f"Ocurrió un error: {e}")
+        st.error(f"Ocurrió un error: {e}") 
+
+def graf_1vec2d (v1): 
+    
+    #convierte los vectores en arreglos "Array"
+    v1 = np.array(v1)
+  
+
+    #estable el canva para graficar
+    fig, ax = plt.subplots() 
+
+    #grafica los vectores 
+    ax.quiver(0, 0, v1[0], v1[1], angles='xy', scale_units='xy', scale=1, color='red', label='Vector 1')
+    
+    # Configurar el gráfico
+    ax.axhline(0, color='black', linewidth=0.5)
+    ax.axvline(0, color='black', linewidth=0.5)
+    ax.set_xlim(-15, 15)
+    ax.set_ylim(-15, 15)
+    ax.set_aspect('equal', adjustable='box')
+    ax.set_title("Grafica de vectores en el plano")
+    ax.set_xlabel("Eje X")
+    ax.set_ylabel("Eje Y")
+    ax.legend()
+    ax.grid(color='lightgray', linestyle='--', linewidth=0.5, alpha=0.5)
+    
+    #muestra el grafico
+    return st.pyplot(fig)         

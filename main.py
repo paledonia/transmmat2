@@ -5,8 +5,6 @@ import streamlit as st
 intro = st.Page("paginas/uno.py", title = "Introducción", icon = ":material/star:")  
 prueba = st.Page("paginas/dos.py", title = "Prueba")   
 vectores = st.Page ("paginas/vectores.py", title = "Vectores") 
-bases = st.Page("paginas/bases.py", title = "Bases") 
-comb_lin = st.Page("paginas/comb_lin.py", title = "Combinacion Lineal")  
 deter = st.Page("paginas/deter.py", title = "Determinantes") 
 trans = st.Page("paginas/trans.py", title = "Transformaciones Lineales") 
 yo = st.Page("paginas/yo.py", title = "Yo") 
@@ -17,7 +15,7 @@ sub_es = st.Page("paginas/sub_es.py", title = "Subespacios Vectoriales")
 
 
 
-pg = st.navigation({"Corazon del Algebra lineal": [intro,vectores, bases,comb_lin,sub_es,trans,deter,mul_trans], "Prueba tus conocimientos":[quiz], "Quien soy":[yo], "prueba":[ prueba]}) 
+pg = st.navigation({"Corazon del Algebra lineal": [intro,vectores,sub_es,trans,deter,mul_trans], "Prueba tus conocimientos":[quiz], "Quien soy":[yo], "prueba":[ prueba]}) 
 
 pg.run()
 

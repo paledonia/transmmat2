@@ -53,7 +53,11 @@ with c3:
 
 with c4:   
     st.image ("https://www.3blue1brown.com/content/lessons/2016/vectors/figures/vector-operations/VectorAdditionPrep.svg")
-    st.image ("https://mathslinks.net/images/jcogs_img/cache/5405_-_28de80_-_b34be6c0c73d368586aca2982aa7ac453962fde9.webp")     
+    st.image ("https://mathslinks.net/images/jcogs_img/cache/5405_-_28de80_-_b34be6c0c73d368586aca2982aa7ac453962fde9.webp")      
+
+st.markdown(""" A las componentes de un vector tambien se le llaman coordenadas.
+
+""")    
 
 
 st.subheader("*Operaciones Basicas: suma y multiplicacion por un escalar*") 

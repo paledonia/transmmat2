@@ -415,6 +415,13 @@ operacione entre vectores o matrices, estamos continuamente cambiando el espacio
 
 """)   
 
+st.markdown("""
+> *Desafortunadamente nadie puede decirte lo que es la :rainbow[Matriz].
+> Tienes que verla por ti mismo*
+>
+> **- Morpheus**
+""")
+       
 
    
 

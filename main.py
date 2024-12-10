@@ -1,33 +1,25 @@
-import streamlit as st
+import streamlit as st 
 
-# título de la página
-st.title("Mi Primera App en Streamlit 🎉")
+# 1) crear las paginas 
 
-# Subtítulo
-st.subheader("¡Bienvenido a mi primera aplicación interactiva!")
-
-# texto
-st.write(
-    """
-    Streamlit es una biblioteca increíble para crear aplicaciones web interactivas con Python. 
-    Esta es una demo simple para mostrar algunas características básicas.
-    """
-)
-
-# Varios inputs
-nombre = st.text_input("¿Cómo te llamas?", "")
-if nombre:
-    st.write(f"¡Hola, {nombre}! 🎈")
+intro = st.Page("paginas/uno.py", title = "Introducción", icon = ":material/star:")  
+prueba = st.Page("paginas/dos.py", title = "Prueba")   
+vectores = st.Page ("paginas/vectores.py", title = "Vectores") 
+bases = st.Page("paginas/bases.py", title = "Bases") 
+comb_lin = st.Page("paginas/comb_lin.py", title = "Combinacion Lineal")  
+deter = st.Page("paginas/deter.py", title = "Determinantes") 
+trans = st.Page("paginas/trans.py", title = "Transformaciones Lineales") 
+yo = st.Page("paginas/yo.py", title = "Yo") 
+quiz = st.Page("paginas/quiz.py", title = "Quiz") 
+mul_trans = st.Page("paginas/mul_trans.py", title = "Multiplicacion vista como Tranformaciones lineales")  
+sub_es = st.Page("paginas/sub_es.py", title = "Subespacios Vectoriales") 
 
 
-edad = st.slider("¿Cuál es tu edad?", 0, 100, 18)
-st.write(f"Tienes {edad} años. ¡Fantástico!")
 
 
-gusta_streamlit = st.checkbox("¿Te gusta Streamlit?")
-if gusta_streamlit:
-    st.write("¡A mí también me encanta! 😍")
+pg = st.navigation({"Corazon del Algebra lineal": [intro,vectores, bases,comb_lin,sub_es,trans,deter,mul_trans], "Prueba tus conocimientos":[quiz], "Quien soy":[yo], "prueba":[ prueba]}) 
+
+pg.run()
 
 
-st.write("Gracias por probar mi primera app. ¡Espero que te haya gustado!")
 

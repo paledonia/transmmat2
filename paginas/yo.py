@@ -8,15 +8,15 @@ st.divider()
 st.subheader("*Andres Castellanos*") 
 
 st.markdown("""
-Mi nombre completo es **Andres Mauricio Castellanos Ramirez**. Mi ciudad de prodecedencia es Barrancabermeja. Alli genere mis primeros 
+Mi nombre completo es **Andres Mauricio Castellanos Ramirez**. Mi ciudad de procedencia es Barrancabermeja. Alli genere mis primeros 
 lazos tanto con la musica, el futbol y las matematicas. Estas tres disciplinas han marcado mi vida de manera sustancial. Ya que no me veo
-dejando de hacer ninguna de estas tres actividades. Son muy enriquecedoras tanto para el espiruto, cuerpo y mente. 
+dejando de hacer ninguna de estas tres actividades. Son muy enriquecedoras tanto para el espiritu, cuerpo y mente. 
 """) 
 
 st.image("https://scontent.fbaq9-1.fna.fbcdn.net/v/t39.30808-6/440120050_7837841132893775_2934785061605323091_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEdqIRhhci3TklcnSlOqreeuHfFCg3XARe4d8UKDdcBF2FH_GeO8qhNmDKwtaQ0fffeySqQZBjka367T3EIwoyk&_nc_ohc=-IE_5-EWZq8Q7kNvgFELe59&_nc_zt=23&_nc_ht=scontent.fbaq9-1.fna&_nc_gid=App9ESLiDd5D6NNOLJgSMwh&oh=00_AYAiLdKrVUGF0j6zf_fk7VZQNhx22aHZXf6bgfRcOVfgqQ&oe=675E2BD5") 
 
 st.markdown ("""
-Me caracterizo por ser alegre, sobre todo cuanto canto. Me gusta transmitir alegría a las personas que tengo a mi al rededor. Aveces soy un poco terco, 
+Me caracterizo por ser alegre, sobre todo cuanto canto. Me gusta transmitir alegría a las personas que tengo a mi alrededor. Aveces soy un poco terco, 
 pero creo que algunos aspectos de mi vida ha funcionado. 
 
 Mi estancia en la UIS (Universidad Industrial de Santander) ha sido de idas y vueltas, pero quiero sacar mi carrera adelante. Ya que 

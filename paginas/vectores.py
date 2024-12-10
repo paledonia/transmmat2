@@ -60,9 +60,39 @@ st.subheader("*Operaciones Basicas: suma y multiplicacion por un escalar*")
 
 st.markdown (""" 
     El matematico generalmente generaliza estas dos formas de ver al vector, con ayuda de 2 operaciones basicas, suma (con ello tambien hablamos de resta) 
-    y multiplicacion por un escalar. Que enriquecen, robustecen y extienden este concepto a las demas areas del conociemiento convirtiendolo en un elemento fundamental. 
+    y multiplicacion por un escalar. Que enriquecen, robustecen y extienden este concepto a las demas areas del conociemiento convirtiendolo en un elemento fundamental.   
+""")         
 
-""")        
+st.markdown("""  
+Para sumar dos vectores tenemos que tener en cuenta que los vectores tengan la misma dimensión, cuando nos aseguremos que son de igual 
+    dimesion hacemos la suma componente a componente colocando el resultado de la suma en la componente que
+    le corresponde. Eso quiere decir que sumamos la primera componente del primer vector con la primera componente del segundo 
+    vector, seguido, se suma la segunda componente del primer vector con la segunda componente del segundo vector. Este proceso se hara hasta que se terminen de sumar toda las 
+    componente de cada vector.  
+""")  
+eq = [1,3,4]  
+iq = [2,4,7]
+st.latex (f"{eq} + {iq} = [1+2 ,  3+4 ,  4+7] = [3, 7, 11]")
+
+st.markdown ("""  
+Cuando multiplicamos un vector por un escalar solo multiplicamos el escalar por cada una de las componentes del vector. Siendo **a**
+el escalar hay que tener en cuenta:  
+
+- Sí **a** > 1, **a** agranda el vector.  
+- Sí **a** = 1, el vector permanece igual. 
+- Sí 0 < **a** < 1, **a** encoge el vector. 
+- Si **a** = 0, **a** desparece al vector.  
+- Sí **a** < 0, **a** escala y cambia de dirección al vector 
+
+""") 
+
+st.latex (f"2{eq} = [2*1 , 2*3 , 2*4] = [2 , 6 , 8]") 
+
+st.markdown (""" 
+Las operaciones interactivas entre vectores presentadas en este aplicativo web estan delimitadas solo a vectoresde dos dimensiones 
+(<span style="font-size: 1em;">R<sup>2</sup></span>) . El lector puede extrapolar estas definiciones a vectores en espacios de mas dimensiones, sin
+temor a cometer errores.  
+""", unsafe_allow_html=True)
 
 opc = st.selectbox ("¿Que operacion quieres realizar?: ", ["Suma","Resta", "Multiplicacion por un escalar"])  
 
@@ -86,8 +116,12 @@ if opc == "Suma":
         c = st.number_input("Coordena X : ", min_value = -14, max_value=15, value = 4)  
         d = st.number_input("Coordena Y : ", min_value = -14, max_value=15, value = 1) 
         v = [c,d]   
-
-    graf_suma2vecx(u,v)      
+    
+    w = np.array(u) + np.array(v) 
+    w = np.array(w) 
+    
+    graf_suma2vecx(u,v)     
+    st.markdown(f"El vector resultante es:  **[{w[0]}, {w[1]}]**")  
 
 elif opc == "Resta":  
     st.title("Resta de dos vectores en el plano")
@@ -105,8 +139,10 @@ elif opc == "Resta":
         c = st.number_input("Coordena X : ", min_value = -14, max_value=15, value = 4)  
         d = st.number_input("Coordena Y : ", min_value = -14, max_value=15, value = 1) 
         v = [c,d] 
-    
-    graf_res2vecx(u,v)   
+    w = np.array(u) - np.array(v) 
+    w = np.array(w) 
+    graf_res2vecx(u,v) 
+    st.markdown(f"El vector resultante es:  **[{w[0]}, {w[1]}]**")     
 elif opc == "Multiplicacion por un escalar": 
     st.title("Multiplicacion de un vector por un escalar") 
     c9,c10 = st. columns(2) 
@@ -120,9 +156,11 @@ elif opc == "Multiplicacion por un escalar":
 
     with c10:   
         st.subheader("Escalar")  
-        c = st.number_input("Coordena X : ", min_value = -14, max_value=15, value = 4) 
-    
+        c = st.number_input("Escalar : ", min_value = -14, max_value=15, value = 4) 
+    w = np.array(u) * c 
+    w = np.array(w) 
     graf_escvector(u,c)    
+    st.markdown (f"El vector resultante es:  **[{w[0]}, {w[1]}]** ")
 
 
        

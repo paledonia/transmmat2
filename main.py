@@ -15,7 +15,7 @@ sub_es = st.Page("paginas/sub_es.py", title = "Subespacios Vectoriales")
 
 
 
-pg = st.navigation({"Corazon del Algebra lineal": [intro,vectores,sub_es,trans], "Prueba tus conocimientos":[quiz], "Quien soy":[yo], "prueba":[ prueba]}) 
+pg = st.navigation({"Corazon del Algebra lineal": [intro,vectores,sub_es,trans ], "Prueba tus conocimientos":[quiz], "Quien soy":[yo], "prueba":[ prueba]}) 
 
 pg.run()
 

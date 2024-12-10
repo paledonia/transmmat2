@@ -46,7 +46,7 @@ with c3:
     elementos se lee de izquierda a derecha y su dimension esta dada por la cantidad de elementos que existan en la lista. Este vector es de dimension 4. 
     El orden de un arreglo es muy importante ya que si cambia no sera el mismo. 
     
-    *[1,2,4,5]* es diferente a *[2,1,4,5]* ya que **1** y **2** cambiaron sus posicones, por lo 
+    *[1,2,4,5]* es diferente a *[2,1,4,5]* ya que **1** y **2** cambiaron sus posiciones, por lo 
     tanto son arreglos diferentes. Vector, en este caso, es una forma sofisticada de decir arreglo o lista.
 
 """)  

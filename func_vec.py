@@ -272,7 +272,7 @@ def graficar_determinante(matriz):
         st.error("La matriz no es válida. Asegúrate de que es una matriz de 2x2")
     except Exception as e:
         st.error(f"Ocurrió un error: {e}") 
-
+#----------------------------------------------------------------------------------------------------------------------------------------------------------
 def graf_1vec2d (v1): 
     
     #convierte los vectores en arreglos "Array"

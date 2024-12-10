@@ -53,6 +53,9 @@ with c2:
     i = [8,0] 
     j = [0,8]
     graf_2vec2d(i,j)     
+st.markdown("""
+Conocidos **i** y **j** como la base canonica del plano 
+""")    
 
 st.markdown("""
 Ahora piensa que las coordenada del vector anterior funcionan como escalares. La primera coordenada del vector escala a **i**:  

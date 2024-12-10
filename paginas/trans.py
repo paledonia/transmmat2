@@ -16,7 +16,7 @@ st.latex ("L(\hat{v}) = \hat{u}")
 st.markdown("*¿Por que usamos la palabra transformacion para indicar funcion?*") 
 st.markdown("""
 
-Se usa esta palabra ya que ella indica movimiento. Cuando pensamos en transformas un vector estamos hablando de que un vector de entrada
+Se usa esta palabra ya que ella indica movimiento. Cuando pensamos en transformar un vector estamos hablando de que un vector de entrada
 se mueve hacia un vector de llegada
 """) 
 
@@ -33,13 +33,13 @@ with c2:
     graf_1vec2d(u) 
 
 st.markdown ("""
-En este caso especificoo el vector **v** (vector de entrada) se movio hacia el vector **u** (vector de llegada)
+En este caso especifico el vector **v** (vector de entrada) se movio hacia el vector **u** (vector de llegada)
 """)  
 
 st.latex ("L(\hat{v}) = \hat{u}")   
 
 st.markdown ("""
-Esta idea de transformar vectores en otros tambien se puede llevar al plano en general, pensado que todas la combinaciones 
+Esta idea de transformar vectores en otros tambien se puede llevar al plano en general, pensando que todas la combinaciones 
 lineales de un subespacio vectorial son a su vez el conjunto de todas las tranformaciones lineales de un sistema de coordenadas.
 """) 
 
@@ -63,7 +63,7 @@ c3, c4 = st.columns (2)
 with c3:  
     st.markdown (""" 
     Si estos son nuestros vectores base de <span style="font-size: 1em;">R<sup>2</sup></span> para hallar la matriz
-    asociada solo colocar basta con colocar  a **i** como columna y a **j** tambien como columna juntandolas como un arreglo. 
+    asociada solo basta con colocar  a **i** como columna y a **j** tambien como columna juntandolas como un arreglo. 
     """,unsafe_allow_html=True)   
     st.latex("\hat{i} = [1,0]") 
     st.latex("\hat{j} = [0,1]")  
@@ -122,7 +122,7 @@ st.divider ()
 st.subheader("*¿Como trasnformo un vector de la base canonica a cualquier otra base?*") 
 
 st.markdown(""" 
-Para trasladar un vector de la base canonica a cualquier otra base solo tenemos que tener 2 elemtos: 
+Para trasladar un vector de la base canonica a cualquier otra base solo tenemos que tener 2 elementos: 
   1. El vector en terminos de la base canonica 
   2. La matriz de representacion de las nuevas bases.
 """) 
@@ -131,13 +131,13 @@ st.markdown ("**Ejemplo:** ")
 
 c7, c8 = st.columns (2) 
 with c7:
-    st.markdown ("Sea w el vector descrito en terminos de la base canonica: ")
+    st.markdown ("Sea **w** el vector descrito en terminos de la base canonica: ")
     st.latex ("\hat{w} = [-5,7]") 
     graf_1vec2d([-5,7]) 
 
 with c8: 
 
-    st.markdown("Sea u y v los vectores de la nueva base: ") 
+    st.markdown("Sea **u** y **v** los vectores de la nueva base: ") 
     st.latex (r""" 
     \begin {bmatrix}
     5 & 4 \\
@@ -169,13 +169,13 @@ Generalizando para cualquier vector de la base canonica y cualquier **v** y **u*
 
 c9, c10 = st.columns (2) 
 with c9:
-    st.markdown ("Sea w el vector descrito en terminos de la base canonica: ")
+    st.markdown ("Sea **w** el vector descrito en terminos de la base canonica: ")
     st.latex ("\hat{w} = [a,b]") 
    
 
 with c10: 
 
-    st.markdown("Sea u y v los vectores de la nueva base: ") 
+    st.markdown("Sea **u** y **v** los vectores de la nueva base: ") 
     st.latex (r""" 
     \begin {bmatrix}
     u1 & v1 \\
@@ -238,7 +238,7 @@ with c12:
     """)   
     graf_base([5,2],[4,-6])  
 st.markdown ("""
-Usaremos la logica del ejemplo anterior para multipliar las bases, pero antes divideremos la segunda matriz en 2 columnas
+Usaremos la logica del ejemplo anterior para multiplicar las bases, pero antes divideremos la segunda matriz en 2 columnas
 """) 
 
 st.latex("\hat{v1} = [5,2]")  
@@ -360,7 +360,7 @@ st.latex (r"""
     """)    
 
 st.markdown("""  
-Obtiniendo la primera columna de la matriz resultante
+Obteniendo la primera columna de la matriz resultante
 """)  
 
 st.latex (r""" 
@@ -391,7 +391,7 @@ st.latex (r"""
     \end{bmatrix} 
     """)   
 st.markdown(""" 
-Teniedo como representacion matricial:
+Teniendo como representacion matricial:
 """)  
 st.latex (r""" 
     \begin {bmatrix}
@@ -401,7 +401,7 @@ st.latex (r"""
     """)     
 
 st.markdown(""" 
-Si observamos con detenimiento podremos notar que el resultado anterior es la definicion de Multiplicacion de matrice en el plano. Multiplicando la primera 
+Si observamos con detenimiento podremos notar que el resultado anterior es la definicion de Multiplicacion de matrices en el plano. Multiplicando la primera 
 fila de M1 con la primera columna de M2, la segunda fila de M1 con la primera columna de M2.... etc 
 
 """)    

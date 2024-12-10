@@ -3,10 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt 
 from func_vec import * 
 
-st.title("Quiz: *prueba tus conociemientos*") 
+st.title("Quiz: *Prueba tus conociemientos*") 
 st.divider() 
 
-st.subheader("1. Que es un vector?")  
+st.subheader("1. ¿Que es un vector?")  
 
 st.markdown("""
  - a. un escalar 

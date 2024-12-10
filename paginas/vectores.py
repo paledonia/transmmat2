@@ -27,7 +27,6 @@ c1, c2 = st.columns (2)
 
 with c1: 
     st.markdown (""" 
-    Dependiendo del area del conocimiento existen diferentes formas de denominar a un elemento como vector. 
     Si tenemos un flecha representada en cualquier espacio, estamos hablando de un punto vista fisico. Se define 
     como un elemento el cual tiene una direccion y sentido descritos. Si estos dos elementos no cambian, podremos
     colocar el vector en cualquier lugar del espacio y seguira siendo el mismo.

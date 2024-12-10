@@ -23,7 +23,7 @@ u = [a,b]
 v = [c,d] 
 c_3 = st.number_input("Coordena X : ", min_value = 90, max_value=100, value = 95)
 
-graf_base (u, v,)
+graf_base (u, v)
 
 
 

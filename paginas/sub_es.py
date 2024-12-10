@@ -190,28 +190,7 @@ st.markdown("""
 En cambio si un par de vectores **v** u **u** junto con
 **a** y **b** escalares generan una linea o se centran en el origen esto indica que los vectores son *Linealmente depedientes* o que tanto **v** como **u**
 se pueden ver como combinacion líneal el uno del otro.
-""")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+""") 
 
 
 st.markdown("""

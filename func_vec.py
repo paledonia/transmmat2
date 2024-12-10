@@ -160,4 +160,115 @@ def graf_base (v1,v2):
     ax.set_ylabel("Eje Y")
     ax.legend()     
 
-    return st.pyplot(fig)  
+    return st.pyplot(fig)   
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+def superposicion_espacios_gen( v1_base, v2_base, rango=10):
+    """
+    Superpone dos cuadrículas generadas por las bases canonicas y las nuevas bases.
+    : i_can: base canonica (1 , 0)
+    : j_can: base canonica (0 , 1)
+    : v1_base: Primer vector base del segundo sistema.
+    : v2_base: Segundo vector base del segundo sistema.
+    : rango: Rango para la cuadrícula (por defecto 10).
+    """
+    # Convertir los vectores base a arreglos de NumPy
+    i_can = np.array([1,0])
+    j_can = np.array([0,1])
+
+     #creacion de la matriz de bases
+
+    mat_1 = [[i_can],[j_can]]
+    mat_1 = np.array(mat_1)
+    trans_m_1 = mat_1.T
+
+    v1_base = np.array(v1_base)
+    v2_base = np.array(v2_base)
+
+    mat_2 = [[v1_base],[v2_base]]
+    mat_2 = np.array(mat_2)
+    trans_m_2 = mat_2.T
+
+    # Crear la figura
+    fig, ax = plt.subplots()    
+
+    # Rango para la cuadrícula
+    grid_range = np.arange(-rango, rango + 1, 1)
+
+    # Dibujar la primera cuadrícula (Base 1)
+    for t in grid_range:
+        start = t * j_can - rango * i_can
+        end = t * j_can + rango * i_can
+        ax.plot([start[0], end[0]], [start[1], end[1]], color='gray', linewidth=0.8, linestyle='--', alpha=0.7)
+    for s in grid_range:
+        start = s * i_can - rango * j_can
+        end = s * i_can + rango * j_can
+        ax.plot([start[0], end[0]], [start[1], end[1]], color='gray', linewidth=0.8, linestyle='--', alpha=0.7)
+
+    # Dibujar la segunda cuadrícula (Base 2)
+    for t in grid_range:
+        start = t * v2_base - rango * v1_base
+        end = t * v2_base + rango * v1_base
+        ax.plot([start[0], end[0]], [start[1], end[1]], color='pink', linewidth=0.8, linestyle='--', alpha=0.7)
+    for s in grid_range:
+        start = s * v1_base - rango * v2_base
+        end = s * v1_base + rango * v2_base
+        ax.plot([start[0], end[0]], [start[1], end[1]], color='blue', linewidth=0.8, linestyle='--', alpha=0.7)
+
+    # Graficar los vectores base de ambos sistemas
+    ax.quiver(0, 0, i_can[0], i_can[1], angles='xy', scale_units='xy', scale=1, color='black', label='Base canonica $\mathbf{i}$')
+    ax.quiver(0, 0, j_can[0], j_can[1], angles='xy', scale_units='xy', scale=1, color='black', label='Base canonica $\mathbf{j}$')
+    ax.quiver(0, 0, v1_base[0], v1_base[1], angles='xy', scale_units='xy', scale=1, color='pink', label='i nuevo $\mathbf{i_n}$')
+    ax.quiver(0, 0, v2_base[0], v2_base[1], angles='xy', scale_units='xy', scale=1, color='blue', label='j nuevo $\mathbf{j_n}$')
+
+    # Configurar el gráfico
+    ax.axhline(0, color='black', linewidth=0.5)
+    ax.axvline(0, color='black', linewidth=0.5)
+    ax.set_xlim(-8, 8)
+    ax.set_ylim(-8, 8)
+    ax.set_aspect('equal', adjustable='box')
+    ax.set_title("Superposicion de espacios vectoriales")
+    ax.set_xlabel("Eje X")
+    ax.set_ylabel("Eje Y")
+    ax.legend()
+    ax.grid(color='lightgray', linestyle='--', linewidth=0.5, alpha=0.5)
+
+    return st.pyplot(fig)
+  
+ #__________________________________________________________________________________________________________________________________________
+def graficar_determinante(matriz):
+    try:
+        matriz = np.array(matriz) # Convert the input to a numpy array
+        if matriz.shape != (2, 2):
+            st.error("La matriz debe ser de 2x2.")
+            return
+
+        a, b = matriz[0, :]
+        c, d = matriz[1, :]
+
+        det = np.linalg.det(matriz)
+
+        plt.figure(figsize=(6, 6))
+        plt.quiver(0, 0, a, c, angles='xy', scale_units='xy', scale=1, color='blue', label=f'i_n ({a},{c})')
+        plt.quiver(0, 0, b, d, angles='xy', scale_units='xy', scale=1, color='red', label=f'j_n ({b},{d})')
+
+        paralelogramo_x = [0, a, a + b, b, 0]
+        paralelogramo_y = [0, c, c + d, d, 0]
+        plt.fill(paralelogramo_x, paralelogramo_y, color='lightblue', alpha=0.5, label=f'Área: {det:.2f}')
+
+        plt.axhline(0, color='black', linewidth=0.5)
+        plt.axvline(0, color='black', linewidth=0.5)
+        plt.xlim(-10, 10)
+        plt.ylim(-10, 10)
+        plt.gca().set_aspect('equal', adjustable='box')
+        plt.title(f"Determinante de la Matriz: {det:.2f}")
+        plt.xlabel("Eje X")
+        plt.ylabel("Eje Y")
+        plt.legend()
+        plt.grid(True)
+
+        st.pyplot(plt) # Use st.pyplot
+
+    except ValueError:
+        st.error("La matriz no es válida. Asegúrate de que es una matriz de 2x2")
+    except Exception as e:
+        st.error(f"Ocurrió un error: {e}")
